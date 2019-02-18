@@ -4,12 +4,18 @@ package com.zipcodewilmington.assessment1.part3;
  * Created by leon on 2/16/18.
  */
 public class PetOwner {
+    private final String name;
+    private final Pet[] addPet;
+
     /**
      * @param name name of the owner of the Pet
      * @param pets array of Pet object
      */
     public PetOwner(String name, Pet... pets) {
         PetOwner petOwner = new PetOwner("", null);
+        this.name = "";
+        this.addPet = getPets();
+        
 
     }
 
@@ -17,7 +23,9 @@ public class PetOwner {
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
-    }
+
+            }
+
 
     /**
      * @param pet pet to be removed from the composite collection Pets
@@ -31,13 +39,13 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
-        return null;
+        return true;
     }
 
     /**
      * @return the age of the Pet object whose age field is the lowest amongst all Pets in this class
      */
-    public Integer getYoungetPetAge() {
+    public Integer getYoungerPetAge() {
         return null;
     }
 
@@ -70,7 +78,7 @@ public class PetOwner {
      * @return the name property of the Pet
      */
     public String getName() {
-        return null;
+        return name;
     }
 
     /**

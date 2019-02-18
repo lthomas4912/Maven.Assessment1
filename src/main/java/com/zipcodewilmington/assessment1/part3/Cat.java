@@ -39,9 +39,9 @@ public class Cat extends Pet {
      * age is 0
      */
     public Cat() {
-        Cat cat = new Cat();
-        this.name = name;
-        this.age = age;
+
+        this.name = "";
+        this.age = Integer.MAX_VALUE;
 
     }
 
@@ -49,6 +49,7 @@ public class Cat extends Pet {
      * @return meow as a string
      */
     public String speak() {
+
         return "Meow";
     }
 }

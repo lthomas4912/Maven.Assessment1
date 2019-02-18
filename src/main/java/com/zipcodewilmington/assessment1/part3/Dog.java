@@ -10,7 +10,7 @@ public class Dog extends Pet {
      */
     public Dog(String name, Integer age) {
 
-        Dog dog = new Dog();
+
         this.name = name;
         this.age = age;
 
@@ -38,8 +38,9 @@ public class Dog extends Pet {
      * age is 0
      */
     public Dog() {
+
         this.name = "";
-        this.age = Integer.MAX_VALUE;
+        this.age = 0;
 
     }
 
