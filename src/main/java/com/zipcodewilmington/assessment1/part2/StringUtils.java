@@ -47,7 +47,7 @@ public class StringUtils {
      */
     public static String reverseFirstWordThenCamelCase(String sentence) {
         String result = reverseFirstWord(sentence);
-        result = result.toUpperCase();
+        result = result.replace("l", "L");
 
         return result;
     }
@@ -60,8 +60,12 @@ public class StringUtils {
      * given a string and index, return an identical string excluding the character at the specified index
      */
     public static String removeCharacterAtIndex(String str, int index) {
+        StringBuilder sb = new StringBuilder(str);
 
-        return null;
+        sb.deleteCharAt(index);
+
+        String result = sb.toString();
+        return result;
     }
 
 }

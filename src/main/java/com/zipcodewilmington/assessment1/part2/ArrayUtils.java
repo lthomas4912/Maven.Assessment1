@@ -1,5 +1,8 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -31,8 +34,7 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        int arrayLength = objectArray.length - getNumberOfOccurrences(objectArray, objectToRemove);
-        Object[] result = new Object[arrayLength];
+        Object [] result = new Object[objectArray.length];
         int index = 0;
         for (int i = 0; i < objectArray.length; i++) {
             Object o = objectArray[i];
@@ -72,22 +74,11 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        Object[] result = new Object[objectArray.length + objectArrayToAdd.length];
-        int count = 0;
-        for (int i = 0; i < objectArray.length; i++) {
-            result[i] = objectArray[i];
-            count++;
-        }
-
-        for (int j = 0; j < objectArrayToAdd.length; j++) {
-            result[count++] = objectArrayToAdd[j];
-        }
-        for (int k = 0; k < result.length; k++) {
 
 
-        }
 
-        return result;
+
+        return null;
     }
 }
 
