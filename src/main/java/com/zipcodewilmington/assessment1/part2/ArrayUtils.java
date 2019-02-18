@@ -2,6 +2,7 @@ package com.zipcodewilmington.assessment1.part2;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 
 /**
  * Created by leon on 2/16/18.
@@ -38,7 +39,7 @@ public class ArrayUtils {
         int index = 0;
         for (int i = 0; i < objectArray.length; i++) {
             Object o = objectArray[i];
-            if (!o.equals(objectToRemove)) {
+            if (o.equals(objectToRemove)) {
                 result[index] = o;
                 index++;
             }
@@ -74,11 +75,17 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
+        Collection<Object> result = new ArrayList<Object>(objectArray.length + objectArrayToAdd.length);
+        for( Object val : objectArray){
+            result.add(val);
+        }
+        for (Object val : objectArrayToAdd){
+            result.add(val);
+        }
 
 
 
-
-        return null;
+        return result.toArray();
     }
 }
 
