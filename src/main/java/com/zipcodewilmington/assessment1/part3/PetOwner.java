@@ -87,4 +87,8 @@ public class PetOwner {
     public Pet[] getPets() {
         return null;
     }
+
+    public int getYoungetPetAge() {
+        return 0;
+    }
 }
