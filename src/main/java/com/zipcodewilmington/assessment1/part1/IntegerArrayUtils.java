@@ -1,5 +1,5 @@
 package com.zipcodewilmington.assessment1.part1;
-
+import java.util.stream.*;
 /**
  * Created by leon on 2/16/18.
  */
@@ -9,7 +9,14 @@ public class IntegerArrayUtils {
      * @return the sum of `intArray`
      */
     public static Integer getSum(Integer[] intArray) {
-        return null;
+    int result = 0;
+
+    for(int i : intArray)
+        result += i;
+
+
+
+      return result;
     }
 
     /**
@@ -17,7 +24,15 @@ public class IntegerArrayUtils {
      * @return the product of `intArray`
      */
     public static Integer getProduct(Integer[] intArray) {
-        return null;
+        int result = 1;
+        for (int i = 0; i < intArray.length; i++) {
+            Integer integer = intArray[i];
+            result = result * integer;
+
+        }
+
+
+        return result;
     }
 
     /**
@@ -25,6 +40,12 @@ public class IntegerArrayUtils {
      * @return the sum of `intArray` divided by number of elements in `intArray`
      */
     public static Double getAverage(Integer[] intArray) {
-        return null;
+        double result = 0;
+        for(double i : intArray)
+            result = result + i;
+
+
+
+        return result = result/intArray.length;
     }
 }
