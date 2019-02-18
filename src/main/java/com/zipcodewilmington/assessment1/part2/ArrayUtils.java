@@ -11,7 +11,17 @@ public class ArrayUtils {
      * Given an array of objects, named `objectArray`, and an object `objectToCount`, return the number of times the `objectToCount` appears in the `objectArray`
      */
     public static Integer getNumberOfOccurrences(Object[] objectArray, Object objectToCount) {
-        return null;
+        int count = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+
+            if (objectArray[i] == objectToCount) {
+                count++;
+            }
+
+
+        }
+
+        return count;
     }
 
     /**
@@ -21,7 +31,19 @@ public class ArrayUtils {
      * Given an array of objects, name `objectArray`, and an object `objectToRemove`, return an array of objects with identical contents excluding `objectToRemove`
      */
     public static Object[] removeValue(Object[] objectArray, Object objectToRemove) {
-        return null;
+        int arrayLength = objectArray.length - getNumberOfOccurrences(objectArray, objectToRemove);
+        Object[] result = new Object[arrayLength];
+        int index = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+            Object o = objectArray[i];
+            if (!o.equals(objectToRemove)) {
+                result[index] = o;
+                index++;
+            }
+
+        }
+
+        return result;
     }
 
     /**
@@ -50,6 +72,24 @@ public class ArrayUtils {
      * given two arrays `objectArray` and `objectArrayToAdd`, return an array containing all elements in `objectArray` and `objectArrayToAdd`
      */
     public static Object[] mergeArrays(Object[] objectArray, Object[] objectArrayToAdd) {
-        return null;
+        Object[] result = new Object[objectArray.length + objectArrayToAdd.length];
+        int count = 0;
+        for (int i = 0; i < objectArray.length; i++) {
+            result[i] = objectArray[i];
+            count++;
+        }
+
+        for (int j = 0; j < objectArrayToAdd.length; j++) {
+            result[count++] = objectArrayToAdd[j];
+        }
+        for (int k = 0; k < result.length; k++) {
+
+
+        }
+
+        return result;
     }
 }
+
+
+
