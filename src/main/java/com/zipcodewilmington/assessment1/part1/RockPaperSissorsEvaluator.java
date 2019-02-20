@@ -16,6 +16,7 @@ public class RockPaperSissorsEvaluator {
        String result = "paper";
 
 
+
         return result;
     }
 
@@ -39,6 +40,10 @@ public class RockPaperSissorsEvaluator {
         String result = "";
                 if(handSignOfPlayer1 == ROCK && handSignOfPlayer2 == SCISSOR) {
                     result =  handSignOfPlayer1;
+                } else if (handSignOfPlayer1 == PAPER && handSignOfPlayer2 == SCISSOR){
+                    result = handSignOfPlayer2;
+                } else if (handSignOfPlayer1 == PAPER && handSignOfPlayer2 == ROCK){
+                    result = handSignOfPlayer1;
                 }
 
 

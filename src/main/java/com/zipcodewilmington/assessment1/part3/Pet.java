@@ -3,9 +3,10 @@ package com.zipcodewilmington.assessment1.part3;
 /**
  * Created by leon on 2/16/18.
  */
-public abstract class Pet implements Animal {
-    protected Object name;
-    protected Object age;
+public abstract  class Pet implements Animal {
+    private String name;
+    private Integer age;
+    private PetOwner person;
 
     /**
      * nullary constructor
@@ -13,7 +14,7 @@ public abstract class Pet implements Animal {
      */
     public Pet() {
         this.name = "";
-        this.age = Integer.MAX_VALUE;
+        this.age = 0;
     }
 
     /**
@@ -45,14 +46,14 @@ public abstract class Pet implements Animal {
      */
     public String getName() {
 
-        return null;
+        return this.name;
     }
 
     /**
      * @return age of this pet
      */
     public Integer getAge() {
-        return null;
+        return this.age;
     }
 
     /**
@@ -60,14 +61,16 @@ public abstract class Pet implements Animal {
      * ensure this instance of `Pet` is added to the owner's composite `pets` list
      */
     public void setOwner(PetOwner newPetOwner) {
-        PetOwner petOwner = new PetOwner("", null);
+        newPetOwner = getOwner();
     }
 
     /**
      * @return PetOwner object whose composite `pets` collection contains this Pet instance
      */
     public PetOwner getOwner() {
+       return ;
 
-        return null;
+
+
     }
 }
