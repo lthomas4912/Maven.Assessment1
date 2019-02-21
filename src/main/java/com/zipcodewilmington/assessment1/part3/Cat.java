@@ -8,8 +8,6 @@ public class Cat extends Pet {
      * @param name name of this Cat
      * @param age age of this Cat
      */
-    private String name;
-    private int age;
 
     public Cat(String name, Integer age) {
        super(name, age);
@@ -20,7 +18,7 @@ public class Cat extends Pet {
      * @param age age of this Cat
      */
     public Cat(Integer age) {
-        super("Cat name", age);
+        super("Cat name",age);
 
 
     }
@@ -29,7 +27,7 @@ public class Cat extends Pet {
      * @param name name of this Cat
      */
     public Cat(String name) {
-        super(name, 0);
+        super(name);
 
 
     }
@@ -42,7 +40,9 @@ public class Cat extends Pet {
      */
     public Cat() {
 
-        super("Cat name", 0);
+        super("Cat name");
+
+
 
     }
 

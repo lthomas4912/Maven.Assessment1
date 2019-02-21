@@ -10,9 +10,8 @@ import java.util.Collections;
  */
 public class PetOwner {
     private String name;
-    private int age;
     private ArrayList<Pet> petList;
-    private Object pet;
+
 
     /**
      * @param name name of the owner of the Pet
@@ -37,7 +36,8 @@ public class PetOwner {
      * @param pet pet to be added to the composite collection of Pets
      */
     public void addPet(Pet pet) {
-       this.petList.add(pet);
+
+        this.petList.add(pet);
     }
 
 
@@ -54,6 +54,7 @@ public class PetOwner {
      * @return true if I own this pet
      */
     public Boolean isOwnerOf(Pet pet) {
+
         return petList.contains(pet);
     }
 
@@ -62,13 +63,13 @@ public class PetOwner {
      */
     public Integer getYoungetPetAge() {
     Pet [] petArray = (Pet[])petList.toArray();
-    Integer youngest = Integer.MAX_VALUE;
+    Pet youngest = petArray[0];
         for(Pet p : petArray){
-            if(p.getAge() < youngest){
-                youngest = p.getAge();
+            if(p.getAge() < youngest.getAge()){
+                youngest = p;
             }
 
-        } return youngest;
+        } return youngest.getAge();
 
     }
     /**
@@ -119,11 +120,8 @@ public class PetOwner {
      */
     public Pet[] getPets() {
 
-        Pet[] result = petList.toArray(new Pet[petList.size()]);
-        if (result.length == 0) {
-            result = new Pet[1];
-        }
-        return result;
+
+        return petList.toArray(new Pet[petList.size()]);
     }
 
 
