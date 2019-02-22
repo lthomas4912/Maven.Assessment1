@@ -6,7 +6,6 @@ package com.zipcodewilmington.assessment1.part3;
 public abstract  class Pet implements Animal {
     private String name;
     private Integer age;
-    private PetOwner person;
     private PetOwner owner;
 
     /**
@@ -67,8 +66,9 @@ public abstract  class Pet implements Animal {
      * ensure this instance of `Pet` is added to the owner's composite `pets` list
      */
     public void setOwner(PetOwner newPetOwner) {
-        
-        owner = newPetOwner;
+
+        this.owner = newPetOwner;
+
     }
 
     /**
