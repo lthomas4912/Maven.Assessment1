@@ -2,8 +2,6 @@ package com.zipcodewilmington.assessment1.part3;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
 
 /**
  * Created by leon on 2/16/18.
@@ -20,16 +18,12 @@ public class PetOwner {
     public PetOwner(String name, Pet... pets) {
         this.name = name;
         if (pets == null) {
-        this.petList = new ArrayList<>();
-        }
-        else {
-            for (Pet pet : pets) {
-
+            this.petList = new ArrayList<>();
+        } else {
+            this.petList = new ArrayList<>(Arrays.asList(pets));
+            for (Pet pet : petList) {
                 pet.setOwner(this);
             }
-            this.petList = new ArrayList<>(Arrays.asList(pets));
-
-
         }
     }
 
